@@ -5,7 +5,7 @@ function App() {
   return (
     <>
         <div className="container mx-auto px-4">
-            <h1 className="text-3xl font-bold underline p-4 text-violet-900/50">
+            <h1 className="text-3xl font-bold underline p-4 text-violet-900/50 dark:text-violet-300">
                 Ryan Geary
             </h1>
 
