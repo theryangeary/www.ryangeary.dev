@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
-import ProjectGrid from '../components/ProjectGrid';
+import ProjectTabs from '../components/ProjectTabs';
 import { loadProjects } from '../utils/content';
 import type { Project } from '../types/content';
 
@@ -25,12 +25,8 @@ function Projects() {
 
   return (
     <div className="container mx-auto px-4">
-      <h1 className="text-3xl font-bold underline p-4 text-violet-900/50 dark:text-violet-300">
-        Projects
-      </h1>
-      
-      <Navbar />
-      
+     <Navbar />
+
       <div className="mt-8">
         {loading ? (
           <div className="text-center py-12">
@@ -39,7 +35,7 @@ function Projects() {
             </p>
           </div>
         ) : (
-          <ProjectGrid projects={projects} />
+          <ProjectTabs projects={projects} />
         )}
       </div>
     </div>

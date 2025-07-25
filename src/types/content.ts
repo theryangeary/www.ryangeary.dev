@@ -7,6 +7,7 @@ export interface Project {
   liveUrl?: string;
   featured: boolean;
   completedAt: string;
+  category: 'production' | 'toy';
 }
 
 export interface BlogPost {
