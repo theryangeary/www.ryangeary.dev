@@ -24,7 +24,7 @@ function Home() {
 
       <div className="grid grid-cols-2 grid-rows-2 gap-4">
         <a href="/projects" className="btn">Projects</a>
-        <a href="/blog" className="btn">Blog</a>
+        <a href="/posts" className="btn">Posts</a>
         <a target="_blank" href="https://github.com/theryangeary/" className="btn">Github</a>
         <a target="_blank" href="https://www.linkedin.com/in/theryangeary/" className="btn">LinkedIn</a>
       </div>
