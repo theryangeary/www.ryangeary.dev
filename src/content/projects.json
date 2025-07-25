@@ -1,0 +1,21 @@
+[
+  {
+    "id": "personal-website",
+    "title": "Personal Website",
+    "description": "A clean, responsive personal website built with React, TypeScript, and Tailwind CSS. Features dark mode support and is deployed using Smallweb.",
+    "techStack": ["React", "TypeScript", "Tailwind CSS", "Vite", "Smallweb"],
+    "githubUrl": "https://github.com/theryangeary/www.ryangeary.dev",
+    "liveUrl": "https://www.ryangeary.dev",
+    "featured": true,
+    "completedAt": "2025-01-15"
+  },
+  {
+    "id": "example-project",
+    "title": "Example Project",
+    "description": "This is a sample project entry to demonstrate the project structure. Replace with your actual projects.",
+    "techStack": ["JavaScript", "Node.js", "Express"],
+    "githubUrl": "https://github.com/theryangeary/example-project",
+    "featured": false,
+    "completedAt": "2024-12-01"
+  }
+]
