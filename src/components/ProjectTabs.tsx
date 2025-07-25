@@ -17,7 +17,7 @@ function ProjectTabs({ projects }: ProjectTabsProps) {
   const currentProjects = activeTab === 'production' ? productionProjects : toyProjects;
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 divide-solid divide-purple-300 divide-y-1">
       <div className="flex justify-center">
         <button
           onClick={() => setActiveTab('production')}
@@ -40,6 +40,8 @@ function ProjectTabs({ projects }: ProjectTabsProps) {
           Toy Projects
         </button>
       </div>
+
+
 
       <div className="mt-8">
         <ProjectGrid projects={currentProjects} />
