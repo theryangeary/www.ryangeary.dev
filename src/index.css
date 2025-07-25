@@ -7,17 +7,6 @@ body {
 }
 
 @layer components {
-    .navbar-item {
-        @apply
-        text-xl
-        text-purple-900/50
-        dark:text-violet-300
-        hover:underline
-        decoration-3
-        pr-3
-        pl-3
-        ;
-    }
 
     /* Text colors */
     .text-primary {

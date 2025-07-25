@@ -41,7 +41,7 @@ function Home() {
                         rounded-none
                         active:translate-1
                         active:shadow-none
-                        shadow-[8px_8px_0_rgba(0,0,0,0.25)];
+                        shadow-[8px_8px_0_rgba(0,0,0,0.25)]
                 " target={target}>{title}</a>
             ))}
           </div>

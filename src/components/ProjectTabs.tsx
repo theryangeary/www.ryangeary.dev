@@ -23,7 +23,7 @@ function ProjectTabs({ projects }: ProjectTabsProps) {
           onClick={() => setActiveTab('production')}
           className={`px-6 py-3 border-1 border-purple-300 font-medium transition-colors ${
             activeTab === 'production'
-              ? 'bg-purple-500 text-amber-200 '
+              ? 'bg-purple-900/75 text-amber-200 '
               : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
           }`}
         >
@@ -33,7 +33,7 @@ function ProjectTabs({ projects }: ProjectTabsProps) {
           onClick={() => setActiveTab('toy')}
           className={`px-6 py-3 border-1 border-purple-300 font-medium transition-colors ${
             activeTab === 'toy'
-              ? 'bg-purple-500 text-amber-200 '
+              ? 'bg-purple-900/75 text-amber-200 '
               : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
           }`}
         >
