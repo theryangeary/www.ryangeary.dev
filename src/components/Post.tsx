@@ -32,7 +32,7 @@ function Post({ post }: PostProps) {
           </div>
         </div>
       </header>
-      
+
       <div className="prose prose-lg dark:prose-invert max-w-none">
         <ReactMarkdown>{post.content}</ReactMarkdown>
       </div>
