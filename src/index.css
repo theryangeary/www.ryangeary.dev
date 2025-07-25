@@ -34,4 +34,13 @@ body {
         pl-3
         ;
     }
+
+    /* Text colors */
+    .text-primary {
+        @apply text-violet-900/50 dark:text-violet-300;
+    }
+    
+    .text-secondary {
+        @apply text-indigo-900 dark:text-indigo-200;
+    }
 }

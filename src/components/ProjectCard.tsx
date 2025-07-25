@@ -14,7 +14,7 @@ function ProjectCard({ project }: ProjectCardProps) {
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
       <header className="mb-4">
         <div className="flex items-start justify-between mb-2">
-          <h3 className="text-xl font-semibold text-violet-900/50 dark:text-violet-300">
+          <h3 className="text-xl font-semibold text-primary">
             {project.title}
           </h3>
           {project.featured && (
