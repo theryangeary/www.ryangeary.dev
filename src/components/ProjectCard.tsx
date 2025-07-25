@@ -5,11 +5,6 @@ interface ProjectCardProps {
 }
 
 function ProjectCard({ project }: ProjectCardProps) {
-  const formattedDate = new Date(project.completedAt).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long'
-  });
-
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
       <header className="mb-4">
@@ -17,15 +12,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           <h3 className="text-xl font-semibold text-primary">
             {project.title}
           </h3>
-          {project.featured && (
-            <span className="bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 px-2 py-1 rounded text-xs font-medium">
-              Featured
-            </span>
-          )}
         </div>
-        <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-          Completed {formattedDate}
-        </p>
       </header>
 
       <p className="text-gray-700 dark:text-gray-300 mb-4">
@@ -59,14 +46,14 @@ function ProjectCard({ project }: ProjectCardProps) {
             View Code →
           </a>
         )}
-        {project.liveUrl && (
+        {project.tryItUrl && (
           <a
-            href={project.liveUrl}
+            href={project.tryItUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="text-violet-600 dark:text-violet-400 hover:underline font-medium text-sm"
           >
-            Live Demo →
+            Try It →
           </a>
         )}
       </div>

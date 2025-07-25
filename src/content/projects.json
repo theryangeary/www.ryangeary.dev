@@ -1,23 +1,38 @@
 [
-  {
-    "id": "personal-website",
-    "title": "Personal Website",
-    "description": "A clean, responsive personal website built with React, TypeScript, and Tailwind CSS. Features dark mode support and is deployed using Smallweb.",
-    "techStack": ["React", "TypeScript", "Tailwind CSS", "Vite", "Smallweb"],
-    "githubUrl": "https://github.com/theryangeary/www.ryangeary.dev",
-    "liveUrl": "https://www.ryangeary.dev",
-    "featured": true,
-    "completedAt": "2025-01-15",
-    "category": "production"
-  },
-  {
-    "id": "example-project",
-    "title": "Example Project",
-    "description": "This is a sample project entry to demonstrate the project structure. Replace with your actual projects.",
-    "techStack": ["JavaScript", "Node.js", "Express"],
-    "githubUrl": "https://github.com/theryangeary/example-project",
-    "featured": false,
-    "completedAt": "2024-12-01",
-    "category": "toy"
-  }
+    {
+        "id": "choose",
+        "title": "choose",
+        "description": "A human-friendly and fast alternative to cut (and sometimes awk).",
+        "techStack": ["Rust"],
+        "githubUrl": "https://github.com/theryangeary/choose",
+        "tryItUrl": "https://github.com/theryangeary/choose?tab=readme-ov-file#installing-from-source",
+        "category": "production"
+    },
+    {
+        "id": "personal-website",
+        "title": "Personal Website",
+        "description": "This site! Built with React, TypeScript, and Tailwind CSS. Features dark mode support and is hosted on my homelab.",
+        "techStack": ["React", "TypeScript", "Tailwind CSS", "Vite", "Smallweb"],
+        "githubUrl": "https://github.com/theryangeary/www.ryangeary.dev",
+        "tryItUrl": "https://www.ryangeary.dev",
+        "category": "production"
+    },
+    {
+        "id": "homelab",
+        "title": "Homelab",
+        "description": "My personal infrastructure, hosted on a Raspberry Pi running docker swarm in my router closet.",
+        "techStack": ["Docker", "Cloudflare Tunnels", "Smallweb", "Nginx"],
+        "githubUrl": "https://github.com/theryangeary/homelab",
+        "tryItUrl": "https://www.ryangeary.dev",
+        "category": "production"
+    },
+    {
+        "id": "fib-o1",
+        "title": "fib-o1: Constant Time Fibonacci Sequence Values",
+        "description": "Abusing the Rust build system to provide O(1) fib(n) at runtime.",
+        "techStack": ["Rust", "BigInt"],
+        "githubUrl": "https://github.com/theryangeary/fib-o1",
+        "tryItUrl": "https://crates.io/crates/fib-o1",
+        "category": "toy"
+    }
 ]

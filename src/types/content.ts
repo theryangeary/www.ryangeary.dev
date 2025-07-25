@@ -4,9 +4,7 @@ export interface Project {
   description: string;
   techStack: string[];
   githubUrl?: string;
-  liveUrl?: string;
-  featured: boolean;
-  completedAt: string;
+  tryItUrl?: string;
   category: 'production' | 'toy';
 }
 
