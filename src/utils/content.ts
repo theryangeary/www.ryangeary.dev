@@ -23,9 +23,9 @@ export async function loadPosts(): Promise<Post[]> {
       const content = await modulePromise() as string;
       const { data, content: markdownContent } = matter(content);
       const frontmatter = data as PostFrontmatter;
-      
+
       const slug = path.replace('/src/content/posts/', '').replace('.md', '');
-      
+
       posts.push({
         slug,
         title: frontmatter.title,

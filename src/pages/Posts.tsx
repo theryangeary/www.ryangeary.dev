@@ -25,12 +25,8 @@ function Posts() {
 
   return (
     <div className="container mx-auto px-4">
-      <h1 className="text-3xl font-bold underline p-4 text-violet-900/50 dark:text-violet-300">
-        Posts
-      </h1>
-      
       <Navbar />
-      
+
       <div className="mt-8">
         {loading ? (
           <div className="text-center py-12">
