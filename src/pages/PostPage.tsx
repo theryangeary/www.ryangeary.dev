@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import BlogPost from '../components/BlogPost';
-import { loadBlogPost } from '../utils/content';
-import type { BlogPost as BlogPostType } from '../types/content';
+import Post from '../components/Post';
+import { loadPost } from '../utils/content';
+import type { Post as PostType } from '../types/content';
 
-function BlogPostPage() {
+function PostPage() {
   const { slug } = useParams<{ slug: string }>();
-  const [post, setPost] = useState<BlogPostType | null>(null);
+  const [post, setPost] = useState<PostType | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -20,14 +20,14 @@ function BlogPostPage() {
       }
 
       try {
-        const blogPost = await loadBlogPost(slug);
-        if (blogPost) {
-          setPost(blogPost);
+        const post = await loadPost(slug);
+        if (post) {
+          setPost(post);
         } else {
           setError('Post not found');
         }
       } catch (error) {
-        console.error('Error loading blog post:', error);
+        console.error('Error loading post:', error);
         setError('Error loading post');
       } finally {
         setLoading(false);
@@ -58,11 +58,11 @@ function BlogPostPage() {
           <h1 className="text-2xl font-bold text-red-600 dark:text-red-400 mb-4">
             {error || 'Post not found'}
           </h1>
-          <a 
-            href="/blog" 
+          <a
+            href="/posts"
             className="text-violet-600 dark:text-violet-400 hover:underline"
           >
-            ← Back to Blog
+            ← Back to Posts
           </a>
         </div>
       </div>
@@ -74,17 +74,17 @@ function BlogPostPage() {
       <div className="container mx-auto px-4 py-4">
         <Navbar />
       </div>
-      <BlogPost post={post} />
+      <Post post={post} />
       <div className="container mx-auto px-4 pb-8">
-        <a 
-          href="/blog" 
+        <a
+          href="/posts"
           className="text-violet-600 dark:text-violet-400 hover:underline"
         >
-          ← Back to Blog
+          ← Back to Posts
         </a>
       </div>
     </div>
   );
 }
 
-export default BlogPostPage;
+export default PostPage;

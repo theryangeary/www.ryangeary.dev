@@ -1,5 +1,5 @@
 import matter from 'gray-matter';
-import type { Project, BlogPost, BlogPostFrontmatter } from '../types/content';
+import type { Project, Post, PostFrontmatter } from '../types/content';
 
 export async function loadProjects(): Promise<Project[]> {
   try {
@@ -14,17 +14,17 @@ export async function loadProjects(): Promise<Project[]> {
   }
 }
 
-export async function loadBlogPosts(): Promise<BlogPost[]> {
-  const blogPostModules = import.meta.glob('/src/content/blog/*.md', { query: '?raw', import: 'default' });
-  const posts: BlogPost[] = [];
+export async function loadPosts(): Promise<Post[]> {
+  const postModules = import.meta.glob('/src/content/posts/*.md', { query: '?raw', import: 'default' });
+  const posts: Post[] = [];
 
-  for (const [path, modulePromise] of Object.entries(blogPostModules)) {
+  for (const [path, modulePromise] of Object.entries(postModules)) {
     try {
       const content = await modulePromise() as string;
       const { data, content: markdownContent } = matter(content);
-      const frontmatter = data as BlogPostFrontmatter;
+      const frontmatter = data as PostFrontmatter;
       
-      const slug = path.replace('/src/content/blog/', '').replace('.md', '');
+      const slug = path.replace('/src/content/posts/', '').replace('.md', '');
       
       posts.push({
         slug,
@@ -35,15 +35,15 @@ export async function loadBlogPosts(): Promise<BlogPost[]> {
         content: markdownContent,
       });
     } catch (error) {
-      console.error(`Error loading blog post ${path}:`, error);
+      console.error(`Error loading post ${path}:`, error);
     }
   }
 
   return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-export async function loadBlogPost(slug: string): Promise<BlogPost | null> {
+export async function loadPost(slug: string): Promise<Post | null> {
   // Load all posts and find the matching one
-  const posts = await loadBlogPosts();
+  const posts = await loadPosts();
   return posts.find(post => post.slug === slug) || null;
 }

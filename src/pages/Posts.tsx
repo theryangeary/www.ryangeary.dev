@@ -1,20 +1,20 @@
 import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
-import BlogList from '../components/BlogList';
-import { loadBlogPosts } from '../utils/content';
-import type { BlogPost } from '../types/content';
+import PostsList from '../components/PostsList';
+import { loadPosts } from '../utils/content';
+import type { Post } from '../types/content';
 
-function Blog() {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
+function Posts() {
+  const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const blogPosts = await loadBlogPosts();
-        setPosts(blogPosts);
+        const posts = await loadPosts();
+        setPosts(posts);
       } catch (error) {
-        console.error('Error loading blog posts:', error);
+        console.error('Error loading posts:', error);
       } finally {
         setLoading(false);
       }
@@ -26,7 +26,7 @@ function Blog() {
   return (
     <div className="container mx-auto px-4">
       <h1 className="text-3xl font-bold underline p-4 text-violet-900/50 dark:text-violet-300">
-        Blog
+        Posts
       </h1>
       
       <Navbar />
@@ -35,15 +35,15 @@ function Blog() {
         {loading ? (
           <div className="text-center py-12">
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              Loading blog posts...
+              Loading posts...
             </p>
           </div>
         ) : (
-          <BlogList posts={posts} />
+          <PostsList posts={posts} />
         )}
       </div>
     </div>
   );
 }
 
-export default Blog;
+export default Posts;

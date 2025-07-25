@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
-import type { BlogPost } from '../types/content';
+import type { Post } from '../types/content';
 
-interface BlogListProps {
-  posts: BlogPost[];
+interface PostsListProps {
+  posts: Post[];
 }
 
-interface BlogCardProps {
-  post: BlogPost;
+interface PostCardProps {
+  post: Post;
 }
 
-function BlogCard({ post }: BlogCardProps) {
+function PostCard({ post }: PostCardProps) {
   const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
@@ -20,7 +20,7 @@ function BlogCard({ post }: BlogCardProps) {
     <article className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
       <header className="mb-4">
         <h2 className="text-xl font-semibold text-violet-900/50 dark:text-violet-300 mb-2">
-          <Link to={`/blog/${post.slug}`} className="hover:underline">
+          <Link to={`/posts/${post.slug}`} className="hover:underline">
             {post.title}
           </Link>
         </h2>
@@ -44,7 +44,7 @@ function BlogCard({ post }: BlogCardProps) {
       </p>
       
       <Link 
-        to={`/blog/${post.slug}`}
+        to={`/posts/${post.slug}`}
         className="text-violet-600 dark:text-violet-400 hover:underline font-medium"
       >
         Read more →
@@ -53,12 +53,12 @@ function BlogCard({ post }: BlogCardProps) {
   );
 }
 
-function BlogList({ posts }: BlogListProps) {
+function PostsList({ posts }: PostsListProps) {
   if (posts.length === 0) {
     return (
       <div className="text-center py-12">
         <p className="text-lg text-gray-600 dark:text-gray-400">
-          No blog posts found.
+          No posts found.
         </p>
       </div>
     );
@@ -67,10 +67,10 @@ function BlogList({ posts }: BlogListProps) {
   return (
     <div className="grid gap-6 md:gap-8">
       {posts.map((post) => (
-        <BlogCard key={post.slug} post={post} />
+        <PostCard key={post.slug} post={post} />
       ))}
     </div>
   );
 }
 
-export default BlogList;
+export default PostsList;

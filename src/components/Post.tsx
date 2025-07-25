@@ -1,11 +1,11 @@
 import ReactMarkdown from 'react-markdown';
-import type { BlogPost as BlogPostType } from '../types/content';
+import type { Post as PostType } from '../types/content';
 
-interface BlogPostProps {
-  post: BlogPostType;
+interface PostProps {
+  post: PostType;
 }
 
-function BlogPost({ post }: BlogPostProps) {
+function Post({ post }: PostProps) {
   const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
@@ -40,4 +40,4 @@ function BlogPost({ post }: BlogPostProps) {
   );
 }
 
-export default BlogPost;
+export default Post;

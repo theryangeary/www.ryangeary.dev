@@ -1,17 +1,17 @@
 ---
-title: "Welcome to My Blog"
+title: "Welcome to My Posts"
 date: "2025-01-20"
 tags: ["personal", "announcement"]
-excerpt: "Welcome to my personal blog where I'll be sharing thoughts on software engineering, technology, and more."
+excerpt: "Welcome to my personal posts where I'll be sharing thoughts on software engineering, technology, and more."
 ---
 
-# Welcome to My Blog
+# Welcome to My Posts
 
-Welcome to my personal blog! I'm excited to share my thoughts and experiences in software engineering, technology, and various projects I'm working on.
+Welcome to my personal posts! I'm excited to share my thoughts and experiences in software engineering, technology, and various projects I'm working on.
 
 ## What to Expect
 
-In this blog, you can expect to find:
+In these posts, you can expect to find:
 
 - **Technical tutorials** on various programming topics
 - **Project showcases** and behind-the-scenes looks at my work

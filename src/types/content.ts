@@ -8,7 +8,7 @@ export interface Project {
   category: 'production' | 'toy';
 }
 
-export interface BlogPost {
+export interface Post {
   slug: string;
   title: string;
   date: string;
@@ -17,7 +17,7 @@ export interface BlogPost {
   content: string;
 }
 
-export interface BlogPostFrontmatter {
+export interface PostFrontmatter {
   title: string;
   date: string;
   tags: string[];

@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import headshot from '/headshot.jpg'
 import './App.css'
 import Projects from './pages/Projects'
-import Blog from './pages/Blog'
-import BlogPostPage from './pages/BlogPostPage'
+import Posts from './pages/Posts'
+import PostPage from './pages/PostPage'
 
 function Home() {
   return (
@@ -56,8 +56,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<BlogPostPage />} />
+        <Route path="/posts" element={<Posts />} />
+        <Route path="/posts/:slug" element={<PostPage />} />
       </Routes>
     </Router>
   )
