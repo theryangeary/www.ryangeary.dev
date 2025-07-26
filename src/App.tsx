@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import headshot from '/headshot.jpg'
 import './App.css'
 import Projects from './pages/Projects'
@@ -29,7 +29,7 @@ function Home() {
                 ['GitHub', 'https://github.com/theryangeary/', '_blank'],
                 ['LinkedIn', 'https://www.linkedin.com/in/theryangeary/', '_blank'],
               ].map(([title, url, target]) => (
-                <a href={url} className="
+                <Link to={url} className="
                         flex
                         justify-center
                         text-amber-200
@@ -42,7 +42,7 @@ function Home() {
                         active:translate-1
                         active:shadow-none
                         shadow-[8px_8px_0_rgba(0,0,0,0.25)]
-                " target={target}>{title}</a>
+                " target={target}>{title}</Link>
             ))}
           </div>
       </div>
