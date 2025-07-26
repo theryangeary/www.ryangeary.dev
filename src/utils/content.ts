@@ -3,7 +3,7 @@ import type { Project, Post, PostFrontmatter } from '../types/content';
 
 export async function loadProjects(): Promise<Project[]> {
   try {
-    const response = await fetch('/src/content/projects.json');
+    const response = await fetch('/projects.json');
     if (!response.ok) {
       throw new Error('Failed to load projects');
     }
